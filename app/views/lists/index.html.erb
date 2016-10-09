@@ -1,14 +1,20 @@
+<style>
+#cnt {
+  width: 100%;
+  height: 100%;
+}
+</style>
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Lists</h1>
-
+<h1>List of ToDo's</h1>
+<body id="cnt">
 <table>
   <thead>
     <tr>
-      <th>Tiket</th>
+      <th>Ticket Number</th>
       <th>Comment</th>
-      <th>Time</th>
-      <th colspan="3"></th>
+      <th>Deadline</th>
+      <th colspan="5"></th>
     </tr>
   </thead>
 
@@ -18,14 +24,18 @@
         <td><%= list.tiket %></td>
         <td><%= list.comment %></td>
         <td><%= list.time %></td>
-        <td><%= link_to 'Show', list %></td>
-        <td><%= link_to 'Edit', edit_list_path(list) %></td>
-        <td><%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', list, class: "btn" %></td>
+        <td><%= link_to 'Edit', edit_list_path(list), class: "btn" %></td>
+        <td><%= link_to 'Delete', list, method: :delete, class: "btn" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
+</body>
 <br>
+<%= link_to 'New ToDo', new_list_path, class: "btn" %>
 
-<%= link_to 'New List', new_list_path %>
+<h1>New ToDo</h1>
+
+<%= render 'form' %>
+<%= link_to 'Back', lists_path %>
