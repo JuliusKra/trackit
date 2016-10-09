@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tiket: MyString
+  comment: MyString
+  time: 2016-10-09
+
+two:
+  tiket: MyString
+  comment: MyString
+  time: 2016-10-09

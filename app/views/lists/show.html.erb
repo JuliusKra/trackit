@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tiket:</strong>
+  <%= @list.tiket %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @list.comment %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @list.time %>
+</p>
+
+<%= link_to 'Edit', edit_list_path(@list) %> |
+<%= link_to 'Back', lists_path %>
